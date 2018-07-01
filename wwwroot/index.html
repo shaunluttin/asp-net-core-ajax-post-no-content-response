@@ -7,12 +7,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            console.log('ready');
-
-            $.ajax({ method: 'POST', url: 'api/values', }).done(() => console.log('done'));
-            $.ajax({ method: 'POST', url: 'api/values1', }).done(() => console.log('done1'));
-            $.ajax({ method: 'POST', url: 'api/values2', }).done(() => console.log('done2'));
-            $.ajax({ method: 'POST', url: 'api/values3', }).done(() => console.log('done3'));
+            $.ajax({ method: 'POST', url: 'api/values', }).done(() => $('body').append('done;'));
+            $.ajax({ method: 'POST', url: 'api/values1', }).done(() => $('body').append('done1;'));
+            $.ajax({ method: 'POST', url: 'api/values2', }).done(() => $('body').append('done2;'));
+            $.ajax({ method: 'POST', url: 'api/values3', }).done(() => $('body').append('done3;'));
         });
     </script>
 </body>
